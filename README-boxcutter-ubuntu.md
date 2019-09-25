@@ -52,11 +52,33 @@ vagrant box add --name boxcutter/ubuntu1804-desktop-0.1.0 ~/projects1/boxcutter/
 vagrant box list
 ```
 
+Example output:
+
+```sh
+nvidia@develmachine2:~/projects1/boxcutter_verify$ vagrant box add --name boxcutter/ubuntu1804-0.1.0 ~/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-0.1.0.box
+==> box: Box file was not detected as metadata. Adding it directly...
+==> box: Adding box 'boxcutter/ubuntu1804-0.1.0' (v0) for provider: 
+    box: Unpacking necessary files from: file:///home/nvidia/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-0.1.0.box
+==> box: Successfully added box 'boxcutter/ubuntu1804-0.1.0' (v0) for 'virtualbox'!
+```
+
+```sh
+nvidia@develmachine2:~/projects1/boxcutter_verify$ vagrant box add --name boxcutter/ubuntu1804-desktop-0.1.0 ~/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-desktop-0.1.0.box
+==> box: Box file was not detected as metadata. Adding it directly...
+==> box: Adding box 'boxcutter/ubuntu1804-desktop-0.1.0' (v0) for provider: 
+    box: Unpacking necessary files from: file:///home/nvidia/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-desktop-0.1.0.box
+==> box: Successfully added box 'boxcutter/ubuntu1804-desktop-0.1.0' (v0) for 'virtualbox'!
+```
+
+
 ### Initialize and run the box
 
 For ubuntu1804-0.1.0
 
 ```sh
+mkdir -p ~/projects1/boxcutter_verify/boxcutter-ubuntu1804-0.1.0
+cd ~/projects1/boxcutter_verify/boxcutter-ubuntu1804-0.1.0
+
 # Initialize box
 vagrant init boxcutter/ubuntu1804-0.1.0
 
@@ -70,6 +92,9 @@ vagrant ssh
 For ubuntu1804-desktop-0.1.0
 
 ```sh
+mkdir -p ~/projects1/boxcutter_verify/boxcutter-ubuntu1804-desktop-0.1.0
+cd ~/projects1/boxcutter_verify/boxcutter-ubuntu1804-desktop-0.1.0
+
 # Initialize box
 vagrant init boxcutter/ubuntu1804-desktop-0.1.0
 
