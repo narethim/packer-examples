@@ -45,9 +45,9 @@ cd ~/projects1/boxcutter_verify
 vagrant box list
 
 
-vagrant box add --name boxcutter/ubuntu1804-0.1.0 ~/projects1/boxcutter/ubuntu/box/ubuntu1804-0.1.0.box
+vagrant box add --name boxcutter/ubuntu1804-0.1.0 ~/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-0.1.0.box
 
-vagrant box add --name boxcutter/ubuntu1804-desktop-0.1.0 ~/projects1/boxcutter/ubuntu/box/ubuntu1804-desktop-0.1.0.box
+vagrant box add --name boxcutter/ubuntu1804-desktop-0.1.0 ~/projects1/boxcutter/ubuntu/box/virtualbox/ubuntu1804-desktop-0.1.0.box
 
 vagrant box list
 ```
